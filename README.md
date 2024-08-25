@@ -16,12 +16,14 @@ You can install these dependencies using pip:
 
 ```bash
 pip install numpy scipy matplotlib astropy
+```
 
 In the python notebook, you will find codes:
 1. To define a schechter function:
 ```bash
 def schechter(S, N_star, s_star, alpha):
     return (N_star/s_star) * (S/s_star)**alpha * np.exp(-S/s_star)
+```
 
 2. Numerical integration to get the CDF
 ```bash
