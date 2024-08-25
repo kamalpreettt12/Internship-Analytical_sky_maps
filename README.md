@@ -35,6 +35,7 @@ for i, l in enumerate(S):
 ```bash
 uniform_random_samples = np.random.uniform(0, max(cdf), num_samples)
 sampled_S_values = np.interp(uniform_random_samples, cdf, S)
+```
 
 4. Sky Map Creation and Smoothing
 ```bash
@@ -45,8 +46,10 @@ for i in range(num_samples):
 
 # Gaussian smoothing
 smoothed_sky_map = gaussian_filter(sky_map, sigma=sigma)
+```
 
 5. Histogram Overlap and Comparison
 ```bash
 plt.hist(sky_map.flatten(), bins=log_bins, color='blue', alpha=0.5, label='Original Map')
 plt.hist(smoothed_sky_map.flatten(), bins=log_bins, color='red', alpha=0.5, label='Smoothed Map')
+```
