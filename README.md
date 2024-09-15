@@ -30,7 +30,7 @@ def schechter(S, N_star, s_star, alpha):
 cdf = np.zeros_like(S)
 for i, l in enumerate(S):
     cdf[i], _ = quad(schechter, 1e-2, l, args=(N_star, s_star, alpha))
-
+```
 3. Sampling the distirbution
 ```bash
 uniform_random_samples = np.random.uniform(0, max(cdf), num_samples)
